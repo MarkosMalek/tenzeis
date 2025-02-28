@@ -12,6 +12,8 @@ tenzeis is a single-player dice game where the goal is to roll all ten dice to t
 - A "New Game" button to reset the game.
 - Celebratory confetti upon winning the game.
 
+-To play the game visit https://tenzeis-markosmaleks-projects.vercel.app/
+
 ## Technologies Used
 
 - Frontend: React.js

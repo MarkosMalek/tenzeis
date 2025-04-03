@@ -1,15 +1,12 @@
-/* eslint-disable react/prop-types */
+import { useContext } from "react";
 import Square from "./Square";
-function Squares(props) {
+import { cellsContext } from "./context/cellsContext";
+function Squares() {
+  const { cells } = useContext(cellsContext);
   return (
     <div className="squares">
-      {props.cells.map((cell, index) => (
-        <Square
-          key={index}
-          cell={cell}
-          handleClick={props.handleCellClick}
-          index={index}
-        />
+      {cells.map((cell, index) => (
+        <Square key={index} cell={cell} index={index} />
       ))}
     </div>
   );

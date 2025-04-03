@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import "./App.css";
+import { cellsContext } from "./context/cellsContext";
 import Squares from "./Squares";
 import Confetti from "react-confetti";
 
@@ -67,12 +68,9 @@ function App() {
           current value between rolls.
         </p>
       </div>
-
-      <Squares
-        className="squares"
-        cells={cells}
-        handleCellClick={handleCellClick}
-      />
+      <cellsContext.Provider value={{ cells, handleCellClick }}>
+        <Squares className="squares" />
+      </cellsContext.Provider>
 
       <button ref={buttonRef} onClick={handleGameStatues}>
         {gameStatues ? "New Game" : "Roll"}

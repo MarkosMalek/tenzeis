@@ -1,8 +1,7 @@
-import { useContext } from "react";
 import Square from "./Square";
-import { cellsContext } from "./context/cellsContext";
+import useGame from "../hooks/useGame";
 function Squares() {
-  const { cells } = useContext(cellsContext);
+  const { cells } = useGame();
   return (
     <div className="squares">
       {cells.map((cell, index) => (
